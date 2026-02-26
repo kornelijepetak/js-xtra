@@ -1,0 +1,54 @@
+{
+    "name": "@fritech/js-xtra",
+    "author": "Kornelije Petak - Friday Technologies",
+    "description": "A set of tools that JS is missing, or at least that's what I thought",
+    "version": "0.1.0",
+    "license": "MIT",
+    "type": "module",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kornelijepetak/js-xtra.git"
+    },
+    "homepage": "https://github.com/kornelijepetak/js-xtra#readme",
+    "bugs": {
+        "url": "https://github.com/kornelijepetak/js-xtra/issues"
+    },
+    "keywords": [
+        "js",
+        "javascript",
+        "core",
+        "utilities",
+        "helper"
+    ],
+    "files": [
+        "dist/**",
+        "README.md",
+        "LICENSE"
+    ],
+    "sideEffects": false,
+    "types": "./dist/index.d.ts",
+    "publishConfig": {
+        "access": "public"
+    },
+    "exports": {
+        ".": {
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        }
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "prepublishOnly": "npm run build"
+    },
+    "devDependencies": {
+        "typescript": "~5.9.3",
+        "vite": "^7.3.1",
+        "vite-plugin-dts": "^4.5.4",
+        "vitest": "^4.0.18"
+    },
+    "overrides": {
+        "minimatch": "^10.2.4"
+    }
+}
